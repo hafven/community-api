@@ -14,3 +14,4 @@ AWS Api Gateway -> Community Hafven -> Cobot
 - Access rights to AWS and Cloud Functions
 - Understand AWS API Gateway / OAUTH Flow
 - Build OAUTH into Community Hafven
+- more commits
