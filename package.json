@@ -4,7 +4,8 @@
   "description": "https://community.hafven.de",
   "main": "auth.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "serverless": "serverless"
   },
   "repository": {
     "type": "git",

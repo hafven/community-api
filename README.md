@@ -11,7 +11,7 @@ Hafven Community Projects should have the possibility to access information of t
 AWS Api Gateway -> Community Hafven -> Cobot
 
 ## ToDos
-- Add CircleCi
+- Add CircleCi further tests
 - Access rights to AWS and Cloud Functions
 - Understand AWS API Gateway / OAUTH Flow
 - Build OAUTH into Community Hafven
