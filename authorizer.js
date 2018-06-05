@@ -5,9 +5,9 @@ module.exports.handler = (event, context, callback) => {
   console.log('Method ARN: ' + event.methodArn);
   
   if (event.authorizationToken == 'true') {
-    callback(null, generatePolicy('user', 'Allow', event.methodArn));
-  } else {
     callback(null, generatePolicy('user', 'Deny', event.methodArn));
+  } else {
+    callback(null, generatePolicy('user', 'Allow', event.methodArn));
   }
 };
   
