@@ -1,0 +1,22 @@
+{
+  "name": "community-api",
+  "version": "1.0.0",
+  "description": "https://community.hafven.de",
+  "main": "auth.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hafven/community-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hafven/community-api/issues"
+  },
+  "homepage": "https://github.com/hafven/community-api#readme",
+  "devDependencies": {
+    "serverless": "^1.27.3"
+  }
+}
