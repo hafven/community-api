@@ -17,6 +17,36 @@ AWS Api Gateway -> Community Hafven -> Cobot
 - Build OAUTH into Community Hafven
 - more commits
 
+## Using the Hafven API
+
+### oAuth2-flow using your Hafven App credentials
+
+Start the oauth flow by sending your user to the following domain passing your app's client parameters. `redirect_uri` must match your app's registered domain and has to use https.
+```
+https://community.hafven.de/oauth/authorize?response_type=code&client_id=<your client id>&redirect_uri=<your apps callback url>&scope=<required scope>&state=<optional parameter that gets passed back to your redirect_uri>
+```
+The users will be asked to log in and approve your app using their Hafven Login credentials. After that users are redirected back to your app, using the `redirect_uri` parameter you provided in your initial request. A parameter called `code` will be added to the URL. You have to extract this information to for the next step. If you provided a state parameter it will be added as well.
+
+In the final step you need to acquire an access token by sending a `POST` request to `https://community.hafven.de/oauth/access_token`. The request body should look like this: `client_id=<your client id>&client_secret=<your secret>&grant_type=authorization_code&code=<the code from the previous step>`
+
+### Hafven Community API 
+You can make requests to recieve the users information using the provided token in your Authorization Header: 
+```
+Authorization: Bearer <your token>
+```
+All endpoints are to be reached under the url `https://community.hafven.de/api/`
+
+#### GET /user
+
+GET request to `https://community.hafven.de/api/user` returns the user's name and email:
+```
+{
+  "full_name": "users full name",
+   "email": "users email adress"
+}
+
+```
+
 ## Getting Started
 
 Add this snippet to yout build script.
