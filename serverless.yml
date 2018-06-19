@@ -2,8 +2,12 @@ service: coworker-api
 
 provider:
   name: aws
-  runtime: nodejs6.10
+  runtime: nodejs8.10
   region: eu-central-1
+
+plugins:
+  - serverless-offline
+  - serverless-jest-plugin
 
 functions:
   auth:
@@ -11,8 +15,16 @@ functions:
     events:
       - http:
           path: auth
+          method: get   
+          request:
+            parameters:
+              querystrings:
+                url: true
+      - http:
+          path: auth
           method: post
-  
+          # cors: true
+
   hello:
     handler: hello.handler
     events:
@@ -24,5 +36,6 @@ functions:
             resultTtlInSeconds: 300
             identitySource: method.request.header.Authorization
             type: token
+
   authorizer:
     handler: authorizer.handler

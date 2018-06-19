@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/hafven/community-api#readme",
   "devDependencies": {
-    "serverless": "^1.27.3"
+    "serverless": "^1.27.3",
+    "serverless-jest-plugin": "^0.1.6",
+    "serverless-offline": "^3.25.4"
   }
 }
