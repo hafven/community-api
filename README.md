@@ -1,3 +1,7 @@
+# Collaboration
+Use the Hafven Community Slack to chat
+hafvencommunity.slack.com
+
 # Community-API
 https://community.hafven.de
 
