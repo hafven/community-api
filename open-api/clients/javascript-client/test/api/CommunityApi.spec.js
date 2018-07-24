@@ -1,5 +1,5 @@
 /**
- * Havfen Community-API
+ * Hafven Community-API
  * Hafven Community API [Development]. This might link to the homepage [http://hafven-community.ngrok.io](http://hafven-community.ngrok.io). Notice that all html tags are valid in this description. Feel free to be descriptive.
  *
  * OpenAPI spec version: 0.0.1
@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HavfenCommunityApi);
+    factory(root.expect, root.HafvenCommunityApi);
   }
-}(this, function(expect, HavfenCommunityApi) {
+}(this, function(expect, HafvenCommunityApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HavfenCommunityApi.CommunityApi();
+    instance = new HafvenCommunityApi.CommunityApi();
   });
 
   var getProperty = function(object, getter, property) {

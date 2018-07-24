@@ -1,4 +1,4 @@
-# HavfenCommunityApi.MeetupsApi
+# HafvenCommunityApi.MeetupsApi
 
 All URIs are relative to *http://api.hafven-community.ngrok.io/v2*
 
@@ -19,9 +19,9 @@ For valid response try integer IDs with positive integer value. Negative or non-
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.MeetupsApi();
+var apiInstance = new HafvenCommunityApi.MeetupsApi();
 
 var meetupId = 789; // Number | ID of the meetup that needs to be deleted
 
@@ -65,9 +65,9 @@ For valid response try integer IDs with value &gt;&#x3D; 1 and &lt;&#x3D; 10. Ot
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.MeetupsApi();
+var apiInstance = new HafvenCommunityApi.MeetupsApi();
 
 var meetupId = 789; // Number | ID of meetup that needs to be fetched
 
@@ -111,11 +111,11 @@ Place an meetup for a group
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.MeetupsApi();
+var apiInstance = new HafvenCommunityApi.MeetupsApi();
 
-var body = new HavfenCommunityApi.Meetup(); // Meetup | meetup placed for purchasing the group
+var body = new HafvenCommunityApi.Meetup(); // Meetup | meetup placed for purchasing the group
 
 
 var callback = function(error, data, response) {

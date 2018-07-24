@@ -1,4 +1,4 @@
-# HavfenCommunityApi.Group
+# HafvenCommunityApi.Group
 
 ## Properties
 Name | Type | Description | Notes

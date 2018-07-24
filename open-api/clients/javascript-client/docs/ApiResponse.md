@@ -1,4 +1,4 @@
-# HavfenCommunityApi.ApiResponse
+# HafvenCommunityApi.ApiResponse
 
 ## Properties
 Name | Type | Description | Notes

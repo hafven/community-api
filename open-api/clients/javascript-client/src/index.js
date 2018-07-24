@@ -1,5 +1,5 @@
 /**
- * Havfen Community-API
+ * Hafven Community-API
  * Hafven Community API [Development]. This might link to the homepage [http://hafven-community.ngrok.io](http://hafven-community.ngrok.io). Notice that all html tags are valid in this description. Feel free to be descriptive.
  *
  * OpenAPI spec version: 0.0.1
@@ -31,9 +31,9 @@
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
    * <pre>
-   * var HavfenCommunityApi = require('index'); // See note below*.
-   * var xxxSvc = new HavfenCommunityApi.XxxApi(); // Allocate the API class we're going to use.
-   * var yyyModel = new HavfenCommunityApi.Yyy(); // Construct a model instance.
+   * var HafvenCommunityApi = require('index'); // See note below*.
+   * var xxxSvc = new HafvenCommunityApi.XxxApi(); // Allocate the API class we're going to use.
+   * var yyyModel = new HafvenCommunityApi.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -45,8 +45,8 @@
    * <p>
    * A non-AMD browser application (discouraged) might do something like this:
    * <pre>
-   * var xxxSvc = new HavfenCommunityApi.XxxApi(); // Allocate the API class we're going to use.
-   * var yyy = new HavfenCommunityApi.Yyy(); // Construct a model instance.
+   * var xxxSvc = new HafvenCommunityApi.XxxApi(); // Allocate the API class we're going to use.
+   * var yyy = new HafvenCommunityApi.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.

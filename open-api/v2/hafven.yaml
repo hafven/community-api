@@ -6,7 +6,7 @@ info:
     that all html tags are valid in this description. Feel free to be
     descriptive.
   version: 0.0.1
-  title: Havfen Community-API
+  title: Hafven Community-API
   termsOfService: 'https://hafven-community.ngrok.io/impressum'
   contact:
     email: apiteam@hafven-community.ngrok.io
@@ -591,7 +591,7 @@ paths:
 securityDefinitions:
   hafven_auth:
     type: oauth2
-    authorizationUrl: 'http://havfen.de/oauth/dialog'
+    authorizationUrl: 'http://hafven.de/oauth/dialog'
     flow: implicit
     scopes:
       'write:groups': modify groups in your account

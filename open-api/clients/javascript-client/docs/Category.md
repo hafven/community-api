@@ -1,4 +1,4 @@
-# HavfenCommunityApi.Category
+# HafvenCommunityApi.Category
 
 ## Properties
 Name | Type | Description | Notes

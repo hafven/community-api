@@ -1,5 +1,5 @@
 /**
- * Havfen Community-API
+ * Hafven Community-API
  * Hafven Community API [Development]. This might link to the homepage [http://hafven-community.ngrok.io](http://hafven-community.ngrok.io). Notice that all html tags are valid in this description. Feel free to be descriptive.
  *
  * OpenAPI spec version: 0.0.1
@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('./Category'), require('./Tag'));
   } else {
     // Browser globals (root is window)
-    if (!root.HavfenCommunityApi) {
-      root.HavfenCommunityApi = {};
+    if (!root.HafvenCommunityApi) {
+      root.HafvenCommunityApi = {};
     }
-    root.HavfenCommunityApi.Group = factory(root.HavfenCommunityApi.ApiClient, root.HavfenCommunityApi.Category, root.HavfenCommunityApi.Tag);
+    root.HafvenCommunityApi.Group = factory(root.HafvenCommunityApi.ApiClient, root.HafvenCommunityApi.Category, root.HafvenCommunityApi.Tag);
   }
 }(this, function(ApiClient, Category, Tag) {
   'use strict';

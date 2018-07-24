@@ -1,5 +1,5 @@
 /**
- * Havfen Community-API
+ * Hafven Community-API
  * Hafven Community API [Development]. This might link to the homepage [http://hafven-community.ngrok.io](http://hafven-community.ngrok.io). Notice that all html tags are valid in this description. Feel free to be descriptive.
  *
  * OpenAPI spec version: 0.0.1
@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HavfenCommunityApi);
+    factory(root.expect, root.HafvenCommunityApi);
   }
-}(this, function(expect, HavfenCommunityApi) {
+}(this, function(expect, HafvenCommunityApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HavfenCommunityApi.ApiResponse();
+    instance = new HafvenCommunityApi.ApiResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,25 +53,25 @@
   describe('ApiResponse', function() {
     it('should create an instance of ApiResponse', function() {
       // uncomment below and update the code to test ApiResponse
-      //var instane = new HavfenCommunityApi.ApiResponse();
-      //expect(instance).to.be.a(HavfenCommunityApi.ApiResponse);
+      //var instane = new HafvenCommunityApi.ApiResponse();
+      //expect(instance).to.be.a(HafvenCommunityApi.ApiResponse);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instane = new HavfenCommunityApi.ApiResponse();
+      //var instane = new HafvenCommunityApi.ApiResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new HavfenCommunityApi.ApiResponse();
+      //var instane = new HafvenCommunityApi.ApiResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new HavfenCommunityApi.ApiResponse();
+      //var instane = new HafvenCommunityApi.ApiResponse();
       //expect(instance).to.be();
     });
 

@@ -1,5 +1,5 @@
 /**
- * Havfen Community-API
+ * Hafven Community-API
  * Hafven Community API [Development]. This might link to the homepage [http://hafven-community.ngrok.io](http://hafven-community.ngrok.io). Notice that all html tags are valid in this description. Feel free to be descriptive.
  *
  * OpenAPI spec version: 0.0.1
@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HavfenCommunityApi);
+    factory(root.expect, root.HafvenCommunityApi);
   }
-}(this, function(expect, HavfenCommunityApi) {
+}(this, function(expect, HafvenCommunityApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HavfenCommunityApi.Meetup();
+    instance = new HafvenCommunityApi.Meetup();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,43 +53,43 @@
   describe('Meetup', function() {
     it('should create an instance of Meetup', function() {
       // uncomment below and update the code to test Meetup
-      //var instane = new HavfenCommunityApi.Meetup();
-      //expect(instance).to.be.a(HavfenCommunityApi.Meetup);
+      //var instane = new HafvenCommunityApi.Meetup();
+      //expect(instance).to.be.a(HafvenCommunityApi.Meetup);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new HavfenCommunityApi.Meetup();
+      //var instane = new HafvenCommunityApi.Meetup();
       //expect(instance).to.be();
     });
 
     it('should have the property groupId (base name: "groupId")', function() {
       // uncomment below and update the code to test the property groupId
-      //var instane = new HavfenCommunityApi.Meetup();
+      //var instane = new HafvenCommunityApi.Meetup();
       //expect(instance).to.be();
     });
 
     it('should have the property suggestedDate (base name: "suggestedDate")', function() {
       // uncomment below and update the code to test the property suggestedDate
-      //var instane = new HavfenCommunityApi.Meetup();
+      //var instane = new HafvenCommunityApi.Meetup();
       //expect(instance).to.be();
     });
 
     it('should have the property eventDate (base name: "eventDate")', function() {
       // uncomment below and update the code to test the property eventDate
-      //var instane = new HavfenCommunityApi.Meetup();
+      //var instane = new HafvenCommunityApi.Meetup();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new HavfenCommunityApi.Meetup();
+      //var instane = new HafvenCommunityApi.Meetup();
       //expect(instance).to.be();
     });
 
     it('should have the property complete (base name: "complete")', function() {
       // uncomment below and update the code to test the property complete
-      //var instane = new HavfenCommunityApi.Meetup();
+      //var instane = new HafvenCommunityApi.Meetup();
       //expect(instance).to.be();
     });
 

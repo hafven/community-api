@@ -1,4 +1,4 @@
-# HavfenCommunityApi.GroupsApi
+# HafvenCommunityApi.GroupsApi
 
 All URIs are relative to *http://api.hafven-community.ngrok.io/v2*
 
@@ -24,16 +24,16 @@ Add a new community group
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
-var defaultClient = HavfenCommunityApi.ApiClient.instance;
+var HafvenCommunityApi = require('hafven_community_api');
+var defaultClient = HafvenCommunityApi.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: hafven_auth
 var hafven_auth = defaultClient.authentications['hafven_auth'];
 hafven_auth.accessToken = 'YOUR ACCESS TOKEN';
 
-var apiInstance = new HavfenCommunityApi.GroupsApi();
+var apiInstance = new HafvenCommunityApi.GroupsApi();
 
-var body = new HavfenCommunityApi.Group(); // Group | Group object that needs to be added to the community
+var body = new HafvenCommunityApi.Group(); // Group | Group object that needs to be added to the community
 
 
 var callback = function(error, data, response) {
@@ -75,14 +75,14 @@ Deletes a group
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
-var defaultClient = HavfenCommunityApi.ApiClient.instance;
+var HafvenCommunityApi = require('hafven_community_api');
+var defaultClient = HafvenCommunityApi.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: hafven_auth
 var hafven_auth = defaultClient.authentications['hafven_auth'];
 hafven_auth.accessToken = 'YOUR ACCESS TOKEN';
 
-var apiInstance = new HavfenCommunityApi.GroupsApi();
+var apiInstance = new HafvenCommunityApi.GroupsApi();
 
 var groupId = 789; // Number | Group id to delete
 
@@ -130,14 +130,14 @@ Multiple status values can be provided with comma separated strings
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
-var defaultClient = HavfenCommunityApi.ApiClient.instance;
+var HafvenCommunityApi = require('hafven_community_api');
+var defaultClient = HafvenCommunityApi.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: hafven_auth
 var hafven_auth = defaultClient.authentications['hafven_auth'];
 hafven_auth.accessToken = 'YOUR ACCESS TOKEN';
 
-var apiInstance = new HavfenCommunityApi.GroupsApi();
+var apiInstance = new HafvenCommunityApi.GroupsApi();
 
 var status = ["status_example"]; // [String] | Status values that need to be considered for filter
 
@@ -181,14 +181,14 @@ Muliple tags can be provided with comma separated strings. Use tag1, tag2, tag3 
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
-var defaultClient = HavfenCommunityApi.ApiClient.instance;
+var HafvenCommunityApi = require('hafven_community_api');
+var defaultClient = HafvenCommunityApi.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: hafven_auth
 var hafven_auth = defaultClient.authentications['hafven_auth'];
 hafven_auth.accessToken = 'YOUR ACCESS TOKEN';
 
-var apiInstance = new HavfenCommunityApi.GroupsApi();
+var apiInstance = new HafvenCommunityApi.GroupsApi();
 
 var tags = ["tags_example"]; // [String] | Tags to filter by
 
@@ -232,8 +232,8 @@ Returns a single group
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
-var defaultClient = HavfenCommunityApi.ApiClient.instance;
+var HafvenCommunityApi = require('hafven_community_api');
+var defaultClient = HafvenCommunityApi.ApiClient.instance;
 
 // Configure API key authorization: api_key
 var api_key = defaultClient.authentications['api_key'];
@@ -241,7 +241,7 @@ api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new HavfenCommunityApi.GroupsApi();
+var apiInstance = new HafvenCommunityApi.GroupsApi();
 
 var groupId = 789; // Number | ID of group to return
 
@@ -285,16 +285,16 @@ Update a community group
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
-var defaultClient = HavfenCommunityApi.ApiClient.instance;
+var HafvenCommunityApi = require('hafven_community_api');
+var defaultClient = HafvenCommunityApi.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: hafven_auth
 var hafven_auth = defaultClient.authentications['hafven_auth'];
 hafven_auth.accessToken = 'YOUR ACCESS TOKEN';
 
-var apiInstance = new HavfenCommunityApi.GroupsApi();
+var apiInstance = new HafvenCommunityApi.GroupsApi();
 
-var body = new HavfenCommunityApi.Group(); // Group | Group object that needs to be added to the community
+var body = new HafvenCommunityApi.Group(); // Group | Group object that needs to be added to the community
 
 
 var callback = function(error, data, response) {
@@ -336,14 +336,14 @@ Updates a group in the community with form data
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
-var defaultClient = HavfenCommunityApi.ApiClient.instance;
+var HafvenCommunityApi = require('hafven_community_api');
+var defaultClient = HafvenCommunityApi.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: hafven_auth
 var hafven_auth = defaultClient.authentications['hafven_auth'];
 hafven_auth.accessToken = 'YOUR ACCESS TOKEN';
 
-var apiInstance = new HavfenCommunityApi.GroupsApi();
+var apiInstance = new HafvenCommunityApi.GroupsApi();
 
 var groupId = 789; // Number | ID of group that needs to be updated
 
@@ -393,14 +393,14 @@ uploads an image
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
-var defaultClient = HavfenCommunityApi.ApiClient.instance;
+var HafvenCommunityApi = require('hafven_community_api');
+var defaultClient = HafvenCommunityApi.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: hafven_auth
 var hafven_auth = defaultClient.authentications['hafven_auth'];
 hafven_auth.accessToken = 'YOUR ACCESS TOKEN';
 
-var apiInstance = new HavfenCommunityApi.GroupsApi();
+var apiInstance = new HafvenCommunityApi.GroupsApi();
 
 var groupId = 789; // Number | ID of group to update
 

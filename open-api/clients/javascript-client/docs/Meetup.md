@@ -1,4 +1,4 @@
-# HavfenCommunityApi.Meetup
+# HafvenCommunityApi.Meetup
 
 ## Properties
 Name | Type | Description | Notes

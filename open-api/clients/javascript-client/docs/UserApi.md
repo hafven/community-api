@@ -1,4 +1,4 @@
-# HavfenCommunityApi.UserApi
+# HafvenCommunityApi.UserApi
 
 All URIs are relative to *http://api.hafven-community.ngrok.io/v2*
 
@@ -24,11 +24,11 @@ This can only be done by the logged in user.
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.UserApi();
+var apiInstance = new HafvenCommunityApi.UserApi();
 
-var body = new HavfenCommunityApi.User(); // User | Created user object
+var body = new HafvenCommunityApi.User(); // User | Created user object
 
 
 var callback = function(error, data, response) {
@@ -70,11 +70,11 @@ Creates list of users with given input array
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.UserApi();
+var apiInstance = new HafvenCommunityApi.UserApi();
 
-var body = [new HavfenCommunityApi.User()]; // [User] | List of user object
+var body = [new HafvenCommunityApi.User()]; // [User] | List of user object
 
 
 var callback = function(error, data, response) {
@@ -116,11 +116,11 @@ Creates list of users with given input array
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.UserApi();
+var apiInstance = new HafvenCommunityApi.UserApi();
 
-var body = [new HavfenCommunityApi.User()]; // [User] | List of user object
+var body = [new HafvenCommunityApi.User()]; // [User] | List of user object
 
 
 var callback = function(error, data, response) {
@@ -162,9 +162,9 @@ This can only be done by the logged in user.
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.UserApi();
+var apiInstance = new HafvenCommunityApi.UserApi();
 
 var username = "username_example"; // String | The name that needs to be deleted
 
@@ -208,9 +208,9 @@ Get user by user name
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.UserApi();
+var apiInstance = new HafvenCommunityApi.UserApi();
 
 var username = "username_example"; // String | The name that needs to be fetched. Use user1 for testing. 
 
@@ -254,9 +254,9 @@ Logs user into the system
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.UserApi();
+var apiInstance = new HafvenCommunityApi.UserApi();
 
 var username = "username_example"; // String | The user name for login
 
@@ -303,9 +303,9 @@ Logs out current logged in user session
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.UserApi();
+var apiInstance = new HafvenCommunityApi.UserApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -343,13 +343,13 @@ This can only be done by the logged in user.
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.UserApi();
+var apiInstance = new HafvenCommunityApi.UserApi();
 
 var username = "username_example"; // String | name that need to be updated
 
-var body = new HavfenCommunityApi.User(); // User | Updated user object
+var body = new HafvenCommunityApi.User(); // User | Updated user object
 
 
 var callback = function(error, data, response) {

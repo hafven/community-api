@@ -1,4 +1,4 @@
-# HavfenCommunityApi.CommunityApi
+# HafvenCommunityApi.CommunityApi
 
 All URIs are relative to *http://api.hafven-community.ngrok.io/v2*
 
@@ -21,16 +21,16 @@ Add a new community group
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
-var defaultClient = HavfenCommunityApi.ApiClient.instance;
+var HafvenCommunityApi = require('hafven_community_api');
+var defaultClient = HafvenCommunityApi.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: hafven_auth
 var hafven_auth = defaultClient.authentications['hafven_auth'];
 hafven_auth.accessToken = 'YOUR ACCESS TOKEN';
 
-var apiInstance = new HavfenCommunityApi.CommunityApi();
+var apiInstance = new HafvenCommunityApi.CommunityApi();
 
-var body = new HavfenCommunityApi.Group(); // Group | Group object that needs to be added to the community
+var body = new HafvenCommunityApi.Group(); // Group | Group object that needs to be added to the community
 
 
 var callback = function(error, data, response) {
@@ -72,9 +72,9 @@ For valid response try integer IDs with positive integer value. Negative or non-
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.CommunityApi();
+var apiInstance = new HafvenCommunityApi.CommunityApi();
 
 var meetupId = 789; // Number | ID of the meetup that needs to be deleted
 
@@ -118,8 +118,8 @@ Returns a map of status codes to quantities
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
-var defaultClient = HavfenCommunityApi.ApiClient.instance;
+var HafvenCommunityApi = require('hafven_community_api');
+var defaultClient = HafvenCommunityApi.ApiClient.instance;
 
 // Configure API key authorization: api_key
 var api_key = defaultClient.authentications['api_key'];
@@ -127,7 +127,7 @@ api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new HavfenCommunityApi.CommunityApi();
+var apiInstance = new HafvenCommunityApi.CommunityApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -165,9 +165,9 @@ For valid response try integer IDs with value &gt;&#x3D; 1 and &lt;&#x3D; 10. Ot
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.CommunityApi();
+var apiInstance = new HafvenCommunityApi.CommunityApi();
 
 var meetupId = 789; // Number | ID of meetup that needs to be fetched
 
@@ -211,11 +211,11 @@ Place an meetup for a group
 
 ### Example
 ```javascript
-var HavfenCommunityApi = require('havfen_community_api');
+var HafvenCommunityApi = require('hafven_community_api');
 
-var apiInstance = new HavfenCommunityApi.CommunityApi();
+var apiInstance = new HafvenCommunityApi.CommunityApi();
 
-var body = new HavfenCommunityApi.Meetup(); // Meetup | meetup placed for purchasing the group
+var body = new HafvenCommunityApi.Meetup(); // Meetup | meetup placed for purchasing the group
 
 
 var callback = function(error, data, response) {

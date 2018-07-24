@@ -1,4 +1,4 @@
-# HavfenCommunityApi.User
+# HafvenCommunityApi.User
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,5 +1,5 @@
 /**
- * Havfen Community-API
+ * Hafven Community-API
  * Hafven Community API [Development]. This might link to the homepage [http://hafven-community.ngrok.io](http://hafven-community.ngrok.io). Notice that all html tags are valid in this description. Feel free to be descriptive.
  *
  * OpenAPI spec version: 0.0.1
@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HavfenCommunityApi);
+    factory(root.expect, root.HafvenCommunityApi);
   }
-}(this, function(expect, HavfenCommunityApi) {
+}(this, function(expect, HafvenCommunityApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HavfenCommunityApi.Category();
+    instance = new HafvenCommunityApi.Category();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('Category', function() {
     it('should create an instance of Category', function() {
       // uncomment below and update the code to test Category
-      //var instane = new HavfenCommunityApi.Category();
-      //expect(instance).to.be.a(HavfenCommunityApi.Category);
+      //var instane = new HafvenCommunityApi.Category();
+      //expect(instance).to.be.a(HafvenCommunityApi.Category);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new HavfenCommunityApi.Category();
+      //var instane = new HafvenCommunityApi.Category();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new HavfenCommunityApi.Category();
+      //var instane = new HafvenCommunityApi.Category();
       //expect(instance).to.be();
     });
 
