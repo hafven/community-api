@@ -24,5 +24,9 @@ functions:
             resultTtlInSeconds: 300
             identitySource: method.request.header.Authorization
             type: token
+
   authorizer:
     handler: authorizer.handler
+
+plugins:
+  - serverless-offline

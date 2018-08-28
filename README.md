@@ -53,11 +53,19 @@ GET request to `https://community.hafven.de/api/user` returns the user's name an
 
 ## Getting Started
 
-Add this snippet to yout build script.
+To start an offline development server, run:
+```
+$ npm install
+$ npm run start
+```
+
+### Deployment
+
+Add this snippet to your build script:
 
 ```
-$ npm install -g serverless
-$ serverless deploy --stage dev -v
+$ npm install
+$ npm run deploy
 ```
 
 ## Contributing
