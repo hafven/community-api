@@ -3,7 +3,7 @@
 module.exports.handler = (event, context, callback) => {
   let body = JSON.parse(event.body);
 
-  if (body.user == "bob" && body.password == "MySecretPassword") {
+  if (body.user == "bob" && body.password == "MyNewSecretPassword") {
     callback(null, {
       statusCode: 200,
       body: JSON.stringify({
