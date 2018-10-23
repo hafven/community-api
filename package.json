@@ -5,7 +5,8 @@
   "main": "auth.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
-    "serverless": "serverless offline start",
+    "serverless": "serverless start",
+    "serverless-offline": "serverless offline start",
     "install-deploy-aws": "cd ./open-api/v2/servers/serverless/output-generated/; npm run generate; npm run combine; npm install"
   },
   "repository": {

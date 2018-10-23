@@ -250,5 +250,4 @@ functions:
             parameters:
               paths:
                 meetupId: true
-plugins:
-  - serverless-offline
+

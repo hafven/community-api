@@ -26,5 +26,4 @@ functions:
             type: token
   authorizer:
     handler: authorizer.handler
-plugins:
-  - serverless-offline
+
