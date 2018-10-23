@@ -1,0 +1,252 @@
+service: coworker-api
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: eu-central-1
+functions:
+  auth:
+    handler: auth.handler
+    events:
+      - http:
+          path: auth
+          method: post
+  hello:
+    handler: hello.handler
+    events:
+      - http:
+          path: hello
+          method: get
+          authorizer:
+            name: authorizer
+            resultTtlInSeconds: 300
+            identitySource: method.request.header.Authorization
+            type: token
+  authorizer:
+    handler: authorizer.handler
+  2e54-PostUser:
+    handler: handler.postUser
+    events:
+      - http:
+          cors: true
+          method: post
+          path: /user
+          integration: lambda
+          request:
+            parameters: {}
+  0b57-PostUserCreateWithArray:
+    handler: handler.postUserCreateWithArray
+    events:
+      - http:
+          cors: true
+          method: post
+          path: /user/createWithArray
+          integration: lambda
+          request:
+            parameters: {}
+  2a28-PostUserCreateWithList:
+    handler: handler.postUserCreateWithList
+    events:
+      - http:
+          cors: true
+          method: post
+          path: /user/createWithList
+          integration: lambda
+          request:
+            parameters: {}
+  eb46-GetUserLogin:
+    handler: handler.getUserLogin
+    events:
+      - http:
+          cors: true
+          method: get
+          path: /user/login
+          integration: lambda
+          request:
+            parameters:
+              querystrings:
+                username: true
+                password: true
+  3ea8-GetUserLogout:
+    handler: handler.getUserLogout
+    events:
+      - http:
+          cors: true
+          method: get
+          path: /user/logout
+          integration: lambda
+          request:
+            parameters: {}
+  a842-GetUser:
+    handler: handler.getUser
+    events:
+      - http:
+          cors: true
+          method: get
+          path: '/user/{username}'
+          integration: lambda
+          request:
+            parameters:
+              paths:
+                username: true
+  9422-PutUser:
+    handler: handler.putUser
+    events:
+      - http:
+          cors: true
+          method: put
+          path: '/user/{username}'
+          integration: lambda
+          request:
+            parameters:
+              paths:
+                username: true
+  bf15-DeleteUser:
+    handler: handler.deleteUser
+    events:
+      - http:
+          cors: true
+          method: delete
+          path: '/user/{username}'
+          integration: lambda
+          request:
+            parameters:
+              paths:
+                username: true
+  660f-PostGroups:
+    handler: handler.postGroups
+    events:
+      - http:
+          cors: true
+          method: post
+          path: /groups
+          integration: lambda
+          request:
+            parameters: {}
+  c730-PutGroups:
+    handler: handler.putGroups
+    events:
+      - http:
+          cors: true
+          method: put
+          path: /groups
+          integration: lambda
+          request:
+            parameters: {}
+  1f6e-GetGroupFindByStatus:
+    handler: handler.getGroupFindByStatus
+    events:
+      - http:
+          cors: true
+          method: get
+          path: /group/findByStatus
+          integration: lambda
+          request:
+            parameters:
+              querystrings:
+                status: true
+  5c64-GetGroupFindByTags:
+    handler: handler.getGroupFindByTags
+    events:
+      - http:
+          cors: true
+          method: get
+          path: /group/findByTags
+          integration: lambda
+          request:
+            parameters:
+              querystrings:
+                tags: true
+  f7e1-GetGroup:
+    handler: handler.getGroup
+    events:
+      - http:
+          cors: true
+          method: get
+          path: '/group/{groupId}'
+          integration: lambda
+          request:
+            parameters:
+              paths:
+                groupId: true
+  08d5-PostGroup:
+    handler: handler.postGroup
+    events:
+      - http:
+          cors: true
+          method: post
+          path: '/group/{groupId}'
+          integration: lambda
+          request:
+            parameters:
+              paths:
+                groupId: true
+  700f-DeleteGroup:
+    handler: handler.deleteGroup
+    events:
+      - http:
+          cors: true
+          method: delete
+          path: '/group/{groupId}'
+          integration: lambda
+          request:
+            parameters:
+              headers:
+                api_key: true
+              paths:
+                groupId: true
+  8cd3-PostGroupUploadImage:
+    handler: handler.postGroupUploadImage
+    events:
+      - http:
+          cors: true
+          method: post
+          path: '/group/{groupId}/uploadImage'
+          integration: lambda
+          request:
+            parameters:
+              paths:
+                groupId: true
+  30fb-GetCommunityInventory:
+    handler: handler.getCommunityInventory
+    events:
+      - http:
+          cors: true
+          method: get
+          path: /community/inventory
+          integration: lambda
+          request:
+            parameters: {}
+  8bfc-PostCommunityMeetup:
+    handler: handler.postCommunityMeetup
+    events:
+      - http:
+          cors: true
+          method: post
+          path: /community/meetup
+          integration: lambda
+          request:
+            parameters: {}
+  25e0-GetCommunityMeetup:
+    handler: handler.getCommunityMeetup
+    events:
+      - http:
+          cors: true
+          method: get
+          path: '/community/meetup/{meetupId}'
+          integration: lambda
+          request:
+            parameters:
+              paths:
+                meetupId: true
+  a215-DeleteCommunityMeetup:
+    handler: handler.deleteCommunityMeetup
+    events:
+      - http:
+          cors: true
+          method: delete
+          path: '/community/meetup/{meetupId}'
+          integration: lambda
+          request:
+            parameters:
+              paths:
+                meetupId: true
