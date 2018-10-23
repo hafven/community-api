@@ -22,6 +22,7 @@
     "serverless-offline": "^3.28.1"
   },
   "dependencies": {
-    "cryptiles": "^4.1.2"
+    "cryptiles": "^4.1.2",
+    "superagent": "^3.7.0"
   }
 }
