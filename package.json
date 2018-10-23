@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\"",
     "serverless": "serverless start",
     "serverless-offline": "serverless offline start",
-    "openapi-generate": "cd ./open-api/v2/servers/serverless/; npm run generate; npm run combine"
-    "install-deploy-aws": "cd ./open-api/v2/servers/serverless/output-generated/serverless-aws; npm install"
+    "openapi-generate": "cd ./open-api/v2/servers/serverless/; npm run generate; npm run combine",
+    "install-deploy-aws": "cd ./open-api/v2/servers/serverless/output-generated/serverless-aws; npm install",
     "run-deploy-aws": "cd ./open-api/v2/servers/serverless/output-generated/serverless-aws; npm run serverless"
   },
   "repository": {
