@@ -2,6 +2,35 @@
 Use the Hafven Community Slack to chat
 https://hafvencommunity.slack.com
 
+
+# New endpoint design based on OpenApi generated lambda functions
+
+*See Circleci build output for latest version of endpoint routes https://circleci.com/gh/hafven/community-api/*
+
+POST - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/auth
+GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/hello
+POST - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/user
+POST - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/user/createWithArray
+POST - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/user/createWithList
+GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/user/login
+GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/user/logout
+GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/user/{username}
+PUT - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/user/{username}
+DELETE - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/user/{username}
+POST - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/groups
+PUT - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/groups
+GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/group/findByStatus
+GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/group/findByTags
+GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/group/{groupId}
+POST - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/group/{groupId}
+DELETE - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/group/{groupId}
+POST - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/group/{groupId}/uploadImage
+GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/community/inventory
+POST - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/community/meetup
+GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/community/meetup/{meetupId}
+DELETE - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/community/meetup/{meetupId}
+
+
 # Community-API
 https://community.hafven.de
 
@@ -33,8 +62,8 @@ The users will be asked to log in and approve your app using their Hafven Login 
 
 In the final step you need to acquire an access token by sending a `POST` request to `https://community.hafven.de/oauth/access_token`. The request body should look like this: `client_id=<your client id>&client_secret=<your secret>&grant_type=authorization_code&code=<the code from the previous step>`
 
-### Hafven Community API 
-You can make requests to recieve the users information using the provided token in your Authorization Header: 
+### Hafven Community API
+You can make requests to recieve the users information using the provided token in your Authorization Header:
 ```
 Authorization: Bearer <your token>
 ```
