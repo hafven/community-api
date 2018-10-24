@@ -7,6 +7,7 @@ https://hafvencommunity.slack.com
 
 *See Circleci build output for latest version of endpoint routes https://circleci.com/gh/hafven/community-api/*
 
+```
 POST - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/auth
 GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/hello
 POST - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/user
@@ -29,7 +30,7 @@ GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/community
 POST - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/community/meetup
 GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/community/meetup/{meetupId}
 DELETE - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/community/meetup/{meetupId}
-
+```
 
 # Community-API v0.1
 https://community.hafven.de
