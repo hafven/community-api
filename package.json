@@ -9,7 +9,7 @@
     "serverless-offline": "serverless offline start",
     "openapi-generate": "cd ./open-api/v2/servers/serverless/; npm run generate; npm run combine",
     "install-deploy-aws": "cd ./open-api/v2/servers/serverless/output-generated/serverless-aws; npm install",
-    "run-deploy-aws": "cd ./open-api/v2/servers/serverless/output-generated/serverless-aws; npm run serverless"
+    "run-deploy-aws": "cd ./open-api/v2/servers/serverless/output-generated/serverless-aws; ./node_modules/.bin/serverless deploy --stage master"
   },
   "repository": {
     "type": "git",
