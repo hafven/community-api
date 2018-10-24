@@ -3,7 +3,7 @@ Use the Hafven Community Slack to chat
 https://hafvencommunity.slack.com
 
 
-# New endpoint design based on OpenApi generated lambda functions
+# New endpoint design based on OpenApi generated lambda functions (Community-API v0.2)
 
 *See Circleci build output for latest version of endpoint routes https://circleci.com/gh/hafven/community-api/*
 
@@ -31,7 +31,7 @@ GET - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/community
 DELETE - https://xd2m6vud16.execute-api.eu-central-1.amazonaws.com/master/community/meetup/{meetupId}
 
 
-# Community-API
+# Community-API v0.1
 https://community.hafven.de
 
 Hafven Community Projects should have the possibility to access information of the Hafven.
@@ -50,7 +50,7 @@ AWS Api Gateway -> Community Hafven -> Cobot
 - Build OAUTH into Community Hafven
 - more commits
 
-## Using the Hafven API
+## Using the Hafven API (Community-API v0.1)
 
 ### oAuth2-flow using your Hafven App credentials
 
