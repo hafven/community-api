@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "cryptiles": "^4.1.2",
-    "superagent": "^3.7.0"
+    "superagent": "^3.7.0",
+    "swagger-to-serverless": "^1.0.1"
   }
 }

@@ -6,12 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate": "./node_modules/swagger-to-serverless/swagger-to-serverless.js ../../../v2/hafven.yaml serverless-head.yml output-generated",
-    "combine": "./node_modules/swagger-to-serverless/swagger-to-serverless.js ../../../v2/hafven.yaml ../../../../serverless.yml output-generated",
+    "combine": "./node_modules/swagger-to-serverless/swagger-to-serverless.js ../../../v2/hafven.yaml ../../../../serverless.yml output-generated"
   },
   "author": "Murat Ünalan <murat.uenala@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "swagger-to-serverless": "^1.0.1"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
