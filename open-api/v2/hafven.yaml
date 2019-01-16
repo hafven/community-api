@@ -36,6 +36,11 @@ tags:
     externalDocs:
       description: Find out more about our users
       url: 'http://hafven-community.ngrok.io/mitglieder'
+  - name: iot
+    description: read/write to devices open to the community
+    externalDocs:
+      description: Find out more about our devices
+      url: 'http://hafven-community.ngrok.io/iot'
 schemes:
   - http
 externalDocs:
@@ -106,24 +111,19 @@ paths:
       responses:
         default:
           description: successful operation
-  /wtfv1/playlist/:id
+  /iot/devices:
     get:
       tags:
-        - wtfv
-      summary: Returns a list of the entries to be played on the wtf box 
+        - iot
+      summary: Returns a list of available devices
       description: ''
-      operationId: getPlaylist
+      operationId: getIotDevices
       produces:
         - application/json
       parameters:
-        - name: id
-          in: path
-          description: Selected the playlist identifier
-          required: true
-          type: string
-        - name: max_entries
+        - name: limit_count
           in: query
-          description: limit the result count
+          description: limit the result count in the response
           required: false
           type: number
       responses:
@@ -132,7 +132,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/Playlist"
+              $ref: "#/definitions/IotDeviceInfo"
           headers:
             X-Rate-Limit:
               type: integer
@@ -142,30 +142,39 @@ paths:
               type: string
               format: date-time
               description: date in UTC when token expires
-        '408':
-          description: Invalid/Unknown requestor email
-  /wtfv1/playlist/:id/addEntry
-    post:
+        '500':
+          description: Unknown/Unspecified error
+        '400':
+          description: No entries available
+        '401':
+          description: Invalid/Unknown deviceId
+  /iot/devices/{deviceId}/playlists:
+    get:
       tags:
-        - wtfv
-      summary: Add an entries to be played on the wtf box 
+        - iot
+      summary: Returns a list of the playlists registered on the device
       description: ''
-      operationId: addPlaylistEntry
+      operationId: getIotPlaylists
       produces:
         - application/json
       parameters:
-        - name: id
+        - name: deviceId
           in: path
-          description: Selected the playlist identifier
+          description: Selected device identifier
           required: true
           type: string
+        - name: limit_count
+          in: query
+          description: limit the result count in the response
+          required: false
+          type: number
       responses:
         '200':
           description: successful operation
           schema:
             type: array
             items:
-              $ref: "#/definitions/Playlist"
+              $ref: "#/definitions/IotPlaylistInfo"
           headers:
             X-Rate-Limit:
               type: integer
@@ -175,10 +184,117 @@ paths:
               type: string
               format: date-time
               description: date in UTC when token expires
-        '408':
-          description: Invalid/Unknown playlist identifier
-        '409':
-          description: Invalid/Unknown entry 
+        '500':
+          description: Unknown/Unspecified error
+        '400':
+          description: No entries available
+        '401':
+          description: Invalid/Unknown deviceId
+  /iot/devices/{deviceId}/playlists/{playlistId}/entries:
+    get:
+      tags:
+        - iot
+      summary: Returns a list of the entries to be played on the device
+      description: ''
+      operationId: getIotPlaylistEntries
+      produces:
+        - application/json
+      parameters:
+        - name: deviceId
+          in: path
+          description: Selected device identifier
+          required: true
+          type: string
+        - name: playlistId
+          in: path
+          description: Selected playlist identifier
+          required: true
+          type: string
+        - name: limit_count
+          in: query
+          description: limit the result count in the response
+          required: false
+          type: number
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/IotPlaylistEntry"
+          headers:
+            X-Rate-Limit:
+              type: integer
+              format: int32
+              description: calls per hour allowed by the user
+            X-Expires-After:
+              type: string
+              format: date-time
+              description: date in UTC when token expires
+        '500':
+          description: Unknown/Unspecified error
+        '400':
+          description: No entries available
+        '401':
+          description: Invalid/Unknown deviceId
+        '402':
+          description: Invalid/Unknown playlistId
+  /iot/devices/{deviceId}/playlists/{playlistId}/entries/{entryId}:
+    get:
+      tags:
+        - iot
+      summary: Returns a list of the entries to be played on the device
+      description: ''
+      operationId: getIotPlaylist
+      produces:
+        - application/json
+      parameters:
+        - name: deviceId
+          in: path
+          description: Selected device identifier
+          required: true
+          type: string
+        - name: playlistId
+          in: path
+          description: Selected playlist identifier
+          required: true
+          type: string
+        - name: entryId
+          in: path
+          description: Selected entry identifier
+          required: true
+          type: string
+        - name: limit_count
+          in: query
+          description: limit the result count in the response
+          required: false
+          type: number
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: object
+            items:
+              $ref: "#/definitions/IotPlaylistEntry"
+          headers:
+            X-Rate-Limit:
+              type: integer
+              format: int32
+              description: calls per hour allowed by the user
+            X-Expires-After:
+              type: string
+              format: date-time
+              description: date in UTC when token expires
+        '500':
+          description: Unknown/Unspecified error
+        '400':
+          description: No entries available
+        '401':
+          description: Invalid/Unknown deviceId
+        '402':
+          description: Invalid/Unknown playlistId
+        '403':
+          description: Invalid/Unknown entryId
   /user/login:
     get:
       tags:
@@ -674,23 +790,54 @@ securityDefinitions:
     name: api_key
     in: header
 definitions:
-  Playlist:
+  IotDeviceInfo:
     type: object
     properties:
       id:
         type: integer
         format: int64
-      groupId:
-        type: integer
-        format: int64
-      expiryDate:
+      statusDatetime:
         type: string
         format: date-time
       uri:
         type: string
-        description: uri of media/website
+        description: link to device details
     xml:
-      name: Playlist
+      name: DeviceInfo
+  IotPlaylistInfo:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      deviceId:
+        type: integer
+        format: int64
+      statusDatetime:
+        type: string
+        format: date-time
+      uri:
+        type: string
+        description: link to playlist details
+    xml:
+      name: PlaylistInfo
+  IotPlaylistEntry:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      deviceId:
+        type: integer
+        format: int64
+      statusDatetime:
+        type: string
+        format: date-time
+      uri:
+        type: string
+        description: link to playlist entry details
+    xml:
+      name: PlaylistEntry
   Meetup:
     type: object
     properties:
@@ -728,11 +875,6 @@ definitions:
         type: string
     xml:
       name: Category
-  Email:
-    type: object
-    properties:
-      email:
-        type: email
   User:
     type: object
     properties:
